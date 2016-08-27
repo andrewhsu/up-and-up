@@ -1,6 +1,7 @@
 # up-and-up
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/andrewhsu/up-and-up)](https://goreportcard.com/report/github.com/andrewhsu/up-and-up)
+[![wercker status](https://app.wercker.com/status/77880672b93deafb4ce64f57347ef64b/s/master "wercker status")](https://app.wercker.com/project/byKey/77880672b93deafb4ce64f57347ef64b)
 
 This micro web service checks if a web service is up and returning
 HTTP response 200. This can be used to serve a "status" web service
