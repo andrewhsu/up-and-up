@@ -1,0 +1,4 @@
+#!/bin/bash -ex
+apt update
+apt install -y ca-certificates
+cp /etc/ssl/certs/ca-certificates.crt .

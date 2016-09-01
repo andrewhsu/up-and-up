@@ -8,6 +8,7 @@ circle-dep:
 	docker info
 	docker run --rm -v "$(CURDIR)":"$(CURDIR)" -w "$(CURDIR)" golang:1.7 gofmt -s -l *.go
 	docker run --rm -v "$(CURDIR)":"$(CURDIR)" -w "$(CURDIR)" golang:1.7 go test -v -cover
+	docker run --rm -v "$(CURDIR)":"$(CURDIR)" -w "$(CURDIR)" ubuntu:xenial "$(CURDIR)/get-certs"
 	docker run --rm -e CGO_ENABLED=0 -e GOOS=linux -v "$(CURDIR)":"$(CURDIR)" -w "$(CURDIR)" golang:1.7 go build -a --installsuffix cgo -o up-and-up .
 	docker build -t andrewh5u/up-and-up .
 
