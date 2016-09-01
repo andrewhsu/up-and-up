@@ -1,10 +1,10 @@
 machine:
-  services: docker
+  services: [ docker ]
 dependencies:
-  override: make circle-dep
+  override: [ make circle-dep ]
 test:
-  override: make circle-test
+  override: [ make circle-test ]
 deployment:
   hub:
     branch: master
-    commands: make circle-deploy
+    commands: [ make circle-deploy ]
