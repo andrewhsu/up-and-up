@@ -10,8 +10,8 @@ circle-dep:
 	docker build -t andrewh5u/up-and-up .
 
 circle-test:
-	docker run -d -p 8080:8080 andrewh5u/up-and-up https://www.google.com
-	curl -v http://localhost:8080/up-and-up
+	docker run -d -p 8080:8080 andrewh5u/up-and-up http://circleci.com
+	sleep 2 && curl -s -S -f -v http://localhost:8080/up-and-up > /dev/null
 
 build: up-and-up
 
