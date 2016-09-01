@@ -9,7 +9,7 @@ dependencies:
 test:
   override:
     - docker run -d -p 8080:8080 andrewh5u/up-and-up https://www.google.com
-    - curl -v http://localhost:8080
+    - curl -v http://localhost:8080/up-and-up
 deployment:
   hub:
     branch: master
