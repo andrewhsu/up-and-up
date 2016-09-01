@@ -6,7 +6,7 @@ help:
 
 circle-dep:
 	docker info
-	docker run --rm -e CGO_ENABLED=0 -e GOOS=linux -v "$PWD":"$PWD" -w "$PWD" golang:1.7 go build -a --installsuffix cgo -o up-and-up .
+	docker run --rm -e CGO_ENABLED=0 -e GOOS=linux -v "$(CURDIR)":"$(CURDIR)" -w "$(CURDIR)" golang:1.7 go build -a --installsuffix cgo -o up-and-up .
 	docker build -t andrewh5u/up-and-up .
 
 circle-test:
@@ -14,7 +14,7 @@ circle-test:
 	curl -v http://localhost:8080/up-and-up
 
 circle-deploy:
-	docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+	docker login -e "$(DOCKER_EMAIL)" -u "$(DOCKER_USER)" -p "$(DOCKER_PASS)"
 	docker push andrewh5u/up-and-up
 
 build: up-and-up
