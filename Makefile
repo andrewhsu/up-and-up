@@ -1,3 +1,5 @@
+# makefile
+
 help:
 	@echo '  init    prepare for build'
 	@echo '  build   compile the source'
