@@ -1,7 +1,6 @@
 # up-and-up
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/andrewhsu/up-and-up)](https://goreportcard.com/report/github.com/andrewhsu/up-and-up)
-[![CircleCI](https://circleci.com/gh/andrewhsu/up-and-up.svg?style=svg)](https://circleci.com/gh/andrewhsu/up-and-up)
 
 This micro web service checks if a web service is up and returning
 HTTP response 200. This can be used to serve a "status" web service
