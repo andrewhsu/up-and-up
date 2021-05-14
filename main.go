@@ -41,9 +41,6 @@ func handlerUrlArgs(w http.ResponseWriter, req *http.Request, urls []string, d t
 	}
 	for i := 0; i < len(urls); i++ {
 		r, ok := <-c
-		if ok == true {
-			log.Println("ok is true")
-		}
 		if !ok {
 			log.Fatal("unexpected closing of channel")
 		}
