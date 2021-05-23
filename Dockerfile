@@ -1,7 +1,7 @@
 FROM golang:alpine as builder
 WORKDIR /go/src/github.com/andrewhsu/up-and-up/
 COPY main.go go.mod ./
-RUN CGO_ENABLED=0 GOOS=linux go build -a --installsuffix cgo -o up-and-up .
+RUN CGO_ENABLED=0 GOOS=linux go build -a -v -o up-and-up .
 
 FROM alpine:latest as certs
 RUN apk --no-cache add ca-certificates
